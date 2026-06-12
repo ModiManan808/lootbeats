@@ -24,14 +24,60 @@ A fast, multithreaded YouTube-to-MP3 downloader written in Python. `lootbeats` a
 To run Lootbeats, you will need:
 
 1. **Python 3.x**
-2. **`yt-dlp`**: Python library for downloading. Install it via pip:
+2. **Python Dependencies**: Install them using the provided `requirements.txt`:
    ```bash
-   pip install yt-dlp
+   pip install -r requirements.txt
    ```
 3. **FFmpeg**: Required for audio extraction, MP3 conversion, and thumbnail embedding.
-   - **Windows:** Download from [gyan.dev](https://www.gyan.dev/ffmpeg/builds/) and add its `bin` folder to your system PATH.
-   - **macOS:** Install via Homebrew: `brew install ffmpeg`
-   - **Linux:** Install via package manager: `sudo apt install ffmpeg`
+   
+   <details>
+   <summary><b>Windows Setup Steps (Click to expand)</b></summary>
+
+   1. Download the **ffmpeg-git-essentials.7z** or **zip** file from [gyan.dev](https://www.gyan.dev/ffmpeg/builds/).
+   2. Extract the folder using a tool like 7-Zip or WinRAR.
+   3. Move the extracted folder to a permanent location (e.g., `C:\ffmpeg`).
+   4. Copy the path to the `bin` folder inside it (e.g., `C:\ffmpeg\bin`).
+   5. Open the Windows Start Menu, search for **"Edit the system environment variables"**, and open it.
+   6. Click on the **Environment Variables...** button at the bottom right.
+   7. Under *System variables*, locate and select the **`Path`** variable, then click **Edit...**.
+   8. Click **New** on the right side, and paste the path to your bin folder (e.g., `C:\ffmpeg\bin`).
+   9. Click **OK** on all windows to save the settings.
+   10. Open a new Command Prompt or PowerShell and verify installation by running:
+       ```cmd
+       ffmpeg -version
+       ```
+   </details>
+
+   <details>
+   <summary><b>macOS Setup Steps (Click to expand)</b></summary>
+
+   1. Open Terminal.
+   2. Install Homebrew (if not already installed) by running:
+      ```bash
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      ```
+   3. Install FFmpeg:
+      ```bash
+      brew install ffmpeg
+      ```
+   </details>
+
+   <details>
+   <summary><b>Linux Setup Steps (Click to expand)</b></summary>
+
+   - **Ubuntu/Debian:**
+     ```bash
+     sudo apt update && sudo apt install ffmpeg -y
+     ```
+   - **Fedora/CentOS:**
+     ```bash
+     sudo dnf install ffmpeg -y
+     ```
+   - **Arch Linux:**
+     ```bash
+     sudo pacman -S ffmpeg
+     ```
+   </details>
 
 ---
 
