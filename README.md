@@ -85,12 +85,12 @@ To run Lootbeats, you will need:
 
 ### 1. Download a single song (by name search)
 ```bash
-python lootbeats.py -s "Bohemian Rhapsody Queen" -d ./music
+python lootbeats.py -s "Billie Eilish - WILDFLOWER" -d ./music
 ```
 
 ### 2. Download a specific YouTube URL
 ```bash
-python lootbeats.py -s "https://www.youtube.com/watch?v=fJ9rUzIMcZQ" -d ./music
+python lootbeats.py -s "https://youtu.be/l08Zw-RY__Q" -d ./music
 ```
 
 ### 3. Bulk download from a text file
